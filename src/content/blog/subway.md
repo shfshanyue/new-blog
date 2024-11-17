@@ -4,7 +4,7 @@ pubDatetime: 2024-11-15
 description: 记录在地铁通勤路上的点点滴滴，以及那些消磨时光的方式
 ---
 
-> 写在下元节人民公园
+> 下元节写在人民公园
 >
 > ![](https://static.shanyue.tech/images/24-11-15/clipboard-5679.cbe3d6.webp)
 

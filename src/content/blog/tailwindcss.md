@@ -94,7 +94,7 @@ Tailwindcss 为啥受欢迎，在我看来无非是**更好用的原子化的CSS
 
 #### 3. 约束性: `bg-gray-500`、`text-lg`、`p-4`
 
-**新人总容易弄出一种大红大绿的新人风格网页**，有了一些约束就很难出现这种很糟糕的色彩控制
+**新人总容易弄出一种大红大绿的新人风格网页**，有了一些约束就很难出现这种很糟糕的色彩控制，也不会在一个页面上出现**几十种大差不差的颜色**
 
 另外，有了 `text-lg` 此类，一个页面上就不会出现**几十种参差不同的字体大小**
 
@@ -150,6 +150,18 @@ Tailwindcss 为啥受欢迎，在我看来无非是**更好用的原子化的CSS
 <div class="focus:ring-2 hover:bg-red-700 dark:bg-gray-800"></div>
 ```
 
+以及可以基于父元素状态、子元素状态以及兄弟元素状态来控制样式，示例：
+
+```html
+<div class="group">
+  <div class="group-hover:text-red-500">Hover me</div>
+</div>
+
+<label class="has-[:checked]:bg-indigo-50">
+  <input type="radio" class="checked:border-indigo-500 ..." />
+</label>
+```
+
 更多修饰符可参考 [TailwindCSS: 配置变量](https://tailwindcss.com/docs/configuring-variants)
 
 ### Q2: 既然 TailwindCSS 这么好用，那岂不是可以摆脱手写 CSS 了
@@ -158,14 +170,22 @@ Tailwindcss 为啥受欢迎，在我看来无非是**更好用的原子化的CSS
 
 #### 1. 复杂选择器
 
-当父级元素鼠标悬浮时的，子级元素的样式控制
+~~当父级元素鼠标悬浮时的，子级元素的样式控制~~ 目前可以使用 `group-hover` 来实现
 
 ```css
 .container:hover .item {
 }
 ```
 
+```html
+<div class="group">
+  <div class="group-hover:text-red-500">Hover me</div>
+</div>
+```
+
 #### 2. CSS function
+
+~~如果需要涉及到一些 CSS function，就需要自定义 class 来实现~~ 目前可以使用 `h-[calc(100vh-6rem)]` 来实现
 
 ```css
 .body {
@@ -217,7 +237,7 @@ Tailwindcss 为啥受欢迎，在我看来无非是**更好用的原子化的CSS
 
 ### Q5: 初期很爽，但是后期维护困难，特别是人员调动后
 
-我算是 TailwindCSS 中度使用者吧，目前还没有后期维护困难方面的困惑。**甚至可以说，维护比以前的方案还要容易**
+我算是 TailwindCSS 中度使用者吧，目前还没有后期维护困难方面的困惑。**甚至可以说，维护比以前的方案还要容易**。以大部分业务项目前端的命名水平以及 CSS 水平来说，手写 CSS 文件反而维护起来更加困难。
 
 至于调试，可轻松使用 `chrome devtools`，还是可以一眼望到底的，而且**没有以前各种 class 存在属性重复覆盖，造成调试困难，从下图可看出 tailwindcss 调试一目了然**
 
@@ -237,21 +257,19 @@ gzip 的核心是 Deflate，而它使用了 LZ77 算法与 Huffman 编码来压�
 
 即使 HTML 因为类名过多造成体积增大，由于 class 高度相似，gzip 也将会得到一个很大的压缩比例。
 
-## 三、谈谈我遇到的几个问题
+## 三、实践
 
-### Q1: PurgeCSS 有可能过多删除 class
+### Q1: 与 classnames 搭配使用
 
-tailwind 使用了 `purgecss` 删除无用的 class，但有时候会吧有用的 class 也给删掉。道理也很简单，它并不能动态执行代码，你计算后的 class 他不认识就给你删了
+使用 `classnames` 与 `tailwindcss` 搭配使用时，很容易实现基于状态控制样式：
 
-比如:
-
-```html
-<div class="text-{{  error  ?  'red'  :  'green'  }}-600"></div>
+```js
+classNames(
+  "text-center transition-opacity",
+  active ? "opacity-100" : "opacity-0",
+  disabled ? "cursor-not-allowed" : "cursor-pointer"
+);
 ```
-
-所以我强烈推荐使用 [classnames](https://npm.devtool.tech/classnames)
-
-上面这段在文档里有描述: [如何正确书写能够被 purgecss 识别的样式](https://tailwindcss.com/docs/optimizing-for-production#writing-purgeable-html)
 
 ### Q2: 样式覆盖问题
 
@@ -261,7 +279,7 @@ tailwind 使用了 `purgecss` 删除无用的 class，但有时候会吧有用�
 <div class="red blue"></div>
 ```
 
-`class` 在样式表中的顺序决定，而非在 class 中的先后顺序。这使得通过 className 扩展样式时遭遇问题，示例如下
+这是因为最终样式是由 `class` 在**样式表中的顺序决定**，而非在 class 字符串属性中的先后顺序。这使得通过 className 扩展样式时遭遇问题，示例如下
 
 ```jsx
 import cx from "classnames";
@@ -272,32 +290,93 @@ function Input({ classname }) {
 }
 
 function ExtendInput() {
-  // 扩展失败
+  // 扩展失败，并一定能够覆盖掉 text-center 样式
   return <Input className="text-left" />;
 }
 ```
 
-## 实践
-
-再来谈几个实践的点
-
-### 与 classnames 搭配使用
-
-```js
-classNames(
-  "text-center transition-opacity",
-  showTip ? "opacity-100" : "opacity-0"
-);
-```
-
-### 与 styled-jsx 搭配使用
-
-此时样式由大量的 `tailwind` 及少量的 `styled-jsx`组成。需要注意此时需要搭配 styled-jsx 的 postcss 插件使用
+那这个时候，可以使用 [tailwind-merge](https://github.com/shadcn/tailwind-merge) 来解决这个问题，他总是可以使得字符串后边的 class 覆盖前边的 class。
 
 ```jsx
-<style jsx>{`
-  .item {
-    @apply p-2 border-b flex justify-between font-mono;
-  }
-`}</style>
+import { twMerge } from "tailwind-merge";
+
+twMerge("px-2 py-1", "p-3");
+// → 'p-3'
+
+twMerge("text-center", "text-left");
+// → 'text-left'
 ```
+
+## 四、基于 `tailwindcss` 学习 CSS
+
+基本上在 `tailwindcss` 中出现的 utility class 都是高频出现的，比如 `text-center`、`flex`、`grid`、`bg-gray-500` 等等。
+
+而 CSS 的全部属性学起来又特别多，所以在对 CSS 有了一个大致的了解后，可以基于 `tailwindcss` 的全部 utility class 学习对应的 CSS 属性。如简单点的 `p-4` 对应的 CSS 属性是 `padding: 1rem`。
+
+而稍微复杂点的，如 `space-x-4` 意思为对于其所有子元素在水平方向上保持 16px 的间距：
+
+![space-x-4](https://static.shanyue.tech/images/24-12-30/clipboard-5351.c72a56.webp)
+
+对应的 CSS 属性是，其核心是对除第一个子元素外的所有子元素设置 `margin-left: 16px`：
+
+```css
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  margin-left: 16px;
+}
+```
+
+那在 tailwindcss 中，还有 `scale-90`、`translate-x-4` 等属性。如果我们要实现一个元素：
+
+- 它的正常位置为：`translateX(-50%)`
+- 当鼠标悬浮时，它需要缩放 `0.9`
+
+如果使用传统 CSS 来实现，需要注意 `transform` 属性不要覆盖：
+
+```css
+.element {
+  transform: translateX(-50%);
+}
+
+.element:hover {
+  transform: translateX(-50%) scale(0.9);
+}
+```
+
+而使用 tailwindcss 来实现，则可以轻松实现：
+
+```html
+<div class="-translate-x-1/2 hover:scale-90"></div>
+```
+
+这是因为对于 `transform` 属性，tailwindcss 是使用 `css variables` 来实现的，所以不会覆盖。
+
+```css
+.-translate-x-1/2 {
+  --tw-translate-x: -50%;
+}
+
+.hover\:scale-90:hover {
+  --tw-scale-x: 0.9;
+  --tw-scale-y: 0.9;
+}
+
+.translate-y-4,
+.translate-y-6 {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(
+      var(--tw-rotate)
+    )
+    skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(
+      var(--tw-scale-y)
+    );
+}
+```
+
+## 五、一些小测试
+
+一些关于 tw 的问题：
+
+1. 一个卡片，如何基于父组件的 hover 状态来给卡片添加 text-green-300 的字体
+2. space-x-4 是如何实现的，它的 css 属性是如何写的
+3. 当实现 rotate 时，如何使其基于左上角来旋转
+4. contents 以及 flow-root 代表什么意思
+5. [&_p]:text-red-400 是什么意思

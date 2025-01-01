@@ -1,6 +1,7 @@
 ---
 title: 简述流行 CSS 框架 TailwindCSS 的优缺点
 date: 2021-01-29 20:45
+draft: false
 ---
 
 > 本文发布于 2021-01-29，并在 2024-12-30 进行了部分内容更新。
@@ -373,10 +374,12 @@ twMerge("text-center", "text-left");
 
 ## 五、一些小测试
 
-一些关于 tw 的问题：
+以下是一些 TailwindCSS 相关的进阶问题，这些问题涉及 CSS 的基础概念，但在 TailwindCSS 中对其进行了封装。
 
-1. 一个卡片，如何基于父组件的 hover 状态来给卡片添加 text-green-300 的字体
-2. space-x-4 是如何实现的，它的 css 属性是如何写的
-3. 当实现 rotate 时，如何使其基于左上角来旋转
-4. contents 以及 flow-root 代表什么意思
-5. [&_p]:text-red-400 是什么意思
+1. 一个卡片，如何基于父组件的 hover 状态来给卡片添加 `text-green-300` 的字体
+2. `space-x-4` 是如何实现的，它的 css 属性是如何写的
+3. 当实现 `rotate` 进行旋转时，如何使其基于左上角来旋转
+4. `contents` 以及 `flow-root` 代表什么意思
+5. `[&_p]:text-red-400` 是什么意思
+6. `has-[:checked]:bg-indigo-50` 是什么意思
+7. 将你自定义的全局样式 `.card` 置于 `@layer components` 中与在全局样式中有什么区别

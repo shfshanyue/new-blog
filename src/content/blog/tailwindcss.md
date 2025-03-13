@@ -1,7 +1,7 @@
 ---
 title: 简述流行 CSS 框架 TailwindCSS 的优缺点
-date: 2021-01-29 20:45
-draft: false
+pubDatetime: 2021-01-29T20:45:00+08:00
+description: "简述流行 CSS 框架 TailwindCSS 的优缺点"
 ---
 
 > 本文发布于 2021-01-29，并在 2024-12-30 进行了部分内容更新。

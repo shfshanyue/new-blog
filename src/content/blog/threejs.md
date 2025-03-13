@@ -1,3 +1,10 @@
+---
+pubDatetime: 2025-03-13T10:00:00Z
+title: Three.js 入门指南
+description: "Three.js 入门指南"
+draft: true
+---
+
 1. 如何构造一个平面
 
 ## 术语

@@ -1,3 +1,10 @@
+---
+pubDatetime: 2025-03-13T10:00:00Z
+title: 动画
+description: "动画"
+draft: true
+---
+
 - 有两个独立组件，一个为 100px 的 Square，一个为 200px 的 Circle。点击按钮时，使 Square 可以顺滑地变成 Circle 组件。
 - 有两个独立组件，一个为 50px 高的 ComponentA，一个为 100px 高的 ComponentB。ComponentA 在 ComponentB 上方，点击按钮时，使 ComponentA fideOut，并使 ComponentB 往上顺滑移动。
 

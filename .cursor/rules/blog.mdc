@@ -1,0 +1,10 @@
+---
+description: 
+globs: *.md
+alwaysApply: false
+---
+
+# 博客指南
+
+- 语言风格参考 blog 目录，如 [tailwindcss.md](mdc:src/content/blog/tailwindcss.md)
+- 在英文单词前后添加空格，对于专业名词使用 "``" 进行包裹

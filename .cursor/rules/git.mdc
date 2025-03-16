@@ -1,0 +1,8 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+- 使用英文生成 git commit message
+- git commit message 需要符合 Conventional Commits 规范

@@ -1,0 +1,27 @@
+---
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import Rednotes from "@layouts/Rednotes.astro";
+
+const rednotes = await getCollection("rednotes");
+
+// 过滤和排序rednotes
+const filteredRednotes = rednotes
+  .filter(note => !note.data.draft)
+  .sort(
+    (a, b) =>
+      new Date(b.data.pubDatetime).getTime() -
+      new Date(a.data.pubDatetime).getTime()
+  );
+
+// 简单分页
+const POSTS_PER_PAGE = 10;
+const paginatedPosts = filteredRednotes.slice(0, POSTS_PER_PAGE);
+---
+
+<Rednotes
+  currentPage={1}
+  totalPages={Math.ceil(filteredRednotes.length / POSTS_PER_PAGE)}
+  paginatedPosts={paginatedPosts}
+/>
+

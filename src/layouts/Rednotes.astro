@@ -11,19 +11,19 @@ import { SITE } from "@config";
 export interface Props {
   currentPage: number;
   totalPages: number;
-  paginatedPosts: CollectionEntry<"blog" | "rednotes">[];
+  paginatedPosts: CollectionEntry<"rednotes">[];
 }
 
 const { currentPage, totalPages, paginatedPosts } = Astro.props;
 ---
 
-<Layout title={`Posts | ${SITE.title}`}>
-  <Header activeNav="posts" />
-  <Main pageTitle="Posts" pageDesc="All the articles I've posted.">
+<Layout title={`RedNotes | ${SITE.title}`}>
+  <Header activeNav="rednotes" />
+  <Main pageTitle="RedNotes" pageDesc="小红书风格的生活分享内容。">
     <ul>
       {
-        paginatedPosts.map(({ data, slug }) => (
-          <Card href={`/posts/${slug}/`} frontmatter={data} />
+        paginatedPosts.map(post => (
+          <Card href={`/rednotes/${post.slug}/`} frontmatter={post.data} />
         ))
       }
     </ul>
@@ -32,9 +32,10 @@ const { currentPage, totalPages, paginatedPosts } = Astro.props;
   <Pagination
     {currentPage}
     {totalPages}
-    prevUrl={`/posts${currentPage - 1 !== 1 ? "/" + (currentPage - 1) : ""}/`}
-    nextUrl={`/posts/${currentPage + 1}/`}
+    prevUrl={`/rednotes${currentPage - 1 !== 1 ? "/" + (currentPage - 1) : ""}/`}
+    nextUrl={`/rednotes/${currentPage + 1}/`}
   />
 
   <Footer noMarginTop={totalPages > 1} />
 </Layout>
+

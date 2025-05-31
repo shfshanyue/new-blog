@@ -19,7 +19,10 @@ const { currentPage, totalPages, paginatedPosts } = Astro.props;
 
 <Layout title={`RedNotes | ${SITE.title}`}>
   <Header activeNav="rednotes" />
-  <Main pageTitle="RedNotes" pageDesc="小红书风格的生活分享内容。">
+  <Main
+    pageTitle="RedNotes"
+    pageDesc="这里的小红书内容与我的小红书保持同步，主要是一些编程知识分享"
+  >
     <ul>
       {
         paginatedPosts.map(post => (
@@ -38,4 +41,3 @@ const { currentPage, totalPages, paginatedPosts } = Astro.props;
 
   <Footer noMarginTop={totalPages > 1} />
 </Layout>
-

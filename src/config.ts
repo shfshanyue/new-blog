@@ -25,6 +25,12 @@ export const LOGO_IMAGE = {
 
 export const SOCIALS: SocialObjects = [
   {
+    name: "Rednote",
+    href: "https://www.xiaohongshu.com/user/profile/63f4d5aa000000000f0111cf",
+    linkTitle: `${SITE.title} on 小红书`,
+    active: true,
+  },
+  {
     name: "Github",
     href: "https://github.com/shfshanyue",
     linkTitle: ` ${SITE.title} on Github`,

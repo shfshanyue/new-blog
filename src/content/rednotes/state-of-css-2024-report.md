@@ -5,6 +5,8 @@ pubDatetime: 2025-06-05T14:30:00Z
 tags: ["CSS", "Web Development", "Frontend", "Survey", "2024"]
 ---
 
+[https://2024.stateofcss.com/en-US](https://2024.stateofcss.com/en-US)
+
 State of CSS 2024 年度报告揭示了一个重要趋势：我们正站在"经典 CSS"和"新 CSS"之间的历史转折点上。这份来自全球开发者的调查报告不仅反映了当前 CSS 生态系统的现状，更预示着前端开发方式的根本性变革。
 
 ![State of CSS 2024 主页](/state-of-css-2024-homepage.png)

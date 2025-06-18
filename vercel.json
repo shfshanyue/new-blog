@@ -1,0 +1,124 @@
+{
+  "redirects": [
+    {
+      "source": "/post/:slug*",
+      "destination": "/posts/:slug*",
+      "permanent": true
+    },
+    {
+      "source": "/post",
+      "destination": "/posts",
+      "permanent": true
+    },
+    {
+      "source": "/tag/:tag*",
+      "destination": "/tags/:tag*",
+      "permanent": true
+    },
+    {
+      "source": "/post/tailwindcss-jsx",
+      "destination": "/posts/nextjs-styled-jsx-tailwindcss-configuration",
+      "permanent": true
+    },
+    {
+      "source": "/post/oc",
+      "destination": "/posts/internet-terminology-oc-offer-call",
+      "permanent": true
+    },
+    {
+      "source": "/post/exit-code-node-and-docker",
+      "destination": "/posts/node-exit-code-docker-handling",
+      "permanent": true
+    },
+    {
+      "source": "/post/rate-limit",
+      "destination": "/posts/rate-limiting-algorithms-leaky-bucket-token-bucket",
+      "permanent": true
+    },
+    {
+      "source": "/post/weekly",
+      "destination": "/posts/frontend-weekly-newsletter-project-retrospective",
+      "permanent": true
+    },
+    {
+      "source": "/post/graphql-guide",
+      "destination": "/posts/graphql-development-guide-best-practices",
+      "permanent": true
+    },
+    {
+      "source": "/post/zero-to-learn-node",
+      "destination": "/posts/nodejs-learning-guide-from-zero-to-expert",
+      "permanent": true
+    },
+    {
+      "source": "/post/life/tongqin",
+      "destination": "/posts/beijing-commute-longze-subway-reflections",
+      "permanent": true
+    },
+    {
+      "source": "/post/life/taohua",
+      "destination": "/posts/spring-peach-blossoms-beijing-memories",
+      "permanent": true
+    },
+    {
+      "source": "/post/life/sunflower",
+      "destination": "/posts/sunflower-fields-beijing-parks-memories",
+      "permanent": true
+    },
+    {
+      "source": "/post/life/learn",
+      "destination": "/posts/learning-methods-project-familiarity-guide",
+      "permanent": true
+    },
+    {
+      "source": "/post/life/geo-get",
+      "destination": "/posts/barefoot-travel-railway-map-quest",
+      "permanent": true
+    },
+    {
+      "source": "/post/life/city",
+      "destination": "/posts/china-administrative-regions-city-count",
+      "permanent": true
+    },
+    {
+      "source": "/post/life/20210501",
+      "destination": "/posts/may-day-2021-review-projects-store",
+      "permanent": true
+    },
+    {
+      "source": "/post/life/2020-half-year-summary",
+      "destination": "/posts/2020-half-year-summary",
+      "permanent": true
+    },
+    {
+      "source": "/post/life/zhibo",
+      "destination": "/posts/first-bilibili-live-streaming-experience",
+      "permanent": true
+    },
+    {
+      "source": "/post/life/free",
+      "destination": "/posts/work-starts-at-two-o-clock",
+      "permanent": true
+    },
+    {
+      "source": "/post/life/zoo",
+      "destination": "/posts/beijing-zoo-morning-visits",
+      "permanent": true
+    },
+    {
+      "source": "/post/life/sunset",
+      "destination": "/posts/sunset-viewing-office",
+      "permanent": true
+    },
+    {
+      "source": "/post/life/geek",
+      "destination": "/posts/geek-time-cashback-platform",
+      "permanent": true
+    },
+    {
+      "source": "/post/life/2019-day",
+      "destination": "/posts/my-typical-day-schedule",
+      "permanent": true
+    }
+  ]
+} 

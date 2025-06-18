@@ -19,9 +19,9 @@ tags: ["travel", "railway", "map", "xinjiang", "journey"]
 
 在信息化建设如此全面的今天，我甚至很难在官方途径找到线路图，殚精竭力地终于在全网找到由个人制作的高铁线路图。
 
-![全国高铁线及动车组列车运行路线图 (2020春)](./assets/gaotie.jpeg)
+![全国高铁线及动车组列车运行路线图 (2020春)](../../assets/images/railway/gaotie.jpeg)
 
-![四纵四横骨架网](./assets/bazongbaheng.jpeg)
+![四纵四横骨架网](../../assets/images/railway/bazongbaheng.jpeg)
 
 ## 如何自己绘制
 
@@ -35,4 +35,4 @@ tags: ["travel", "railway", "map", "xinjiang", "journey"]
 
 - [县市边界行政图: https://datav.aliyun.com/tools/atlas](https://datav.aliyun.com/tools/atlas/#&lat=31.769817845138945&lng=104.29901249999999&zoom=4)
 
-![中国地形图](./assets/topo.jpg)
+![中国地形图](../../assets/images/railway/topo.jpg)

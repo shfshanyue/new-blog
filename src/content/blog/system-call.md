@@ -1,7 +1,7 @@
 ---
 title: Linux 常见系统调用详解：从 epoll 到 mmap 的完整 C 语言 API 指南
 description: 详细介绍 Linux 操作系统中 11 个核心系统调用的使用方法，包含 epoll、accept、read/write、mmap、brk 等函数的 C 语言签名、参数说明和实际应用示例。
-publishDate: 2019-07-11T08:31:01.000Z
+pubDatetime: 2019-07-11T08:31:01.000Z
 tags: ["linux", "system-call", "c-language", "operating-system", "backend"]
 ---
 

@@ -25,21 +25,17 @@ tags: ["life", "schedule", "running", "hiking", "beijing", "routine"]
 
 租住地方附近有诸多大学，如中央民族大学，北京交通大学，北京邮电大学，中央财经大学，北京外国语大学，这极大增加了我的幸福感并让跑步更容易坚持下去，我常在交大跑步，偶尔也会去其他学校。
 
-![早上六点风雨欲来的民大操场](./assets/minda.jpeg)
+![早上六点风雨欲来的民大操场](https://static.shanyue.tech/images/25-06-18/clipboard-7779.4032eb.webp)
 
-![早上六点雨后的交大操场](./assets/jiaoda.jpg)
-
-![早上七点北外操场的蓝天白云](./assets/beiwai.jpg)
+![](https://static.shanyue.tech/images/25-06-18/clipboard-6327.bd16c2.webp)
 
 目前半马最快是 `1小时56分钟`，配速五分半，在北外的三百米小操场上跑下来，那天人很挤，背的滕王阁序。
-
-![半马](../assets/run-21.jpeg)
 
 > 8:00 早饭
 
 跑完步后就近在学校吃，偶尔会自己做豆浆，蒸俩鸡蛋。吃完饭回家，刷牙洗澡刷会手机准备去上班。
 
-![跑步后常吃的豆腐脑](./assets/doufunao.jpg)
+![](https://static.shanyue.tech/images/25-06-18/clipboard-2825.e98554.webp)
 
 > 9:50 出门去上班
 
@@ -65,12 +61,12 @@ tags: ["life", "schedule", "running", "hiking", "beijing", "routine"]
 
 另外香山因红叶知名，而往往红叶不在香山，西山背后的南马场水库与红叶大峡谷中红叶更胜一筹，且没有秋后香山摩肩接踵般的挤。
 
-![爬山](../assets/walk.jpeg)
+![](https://static.shanyue.tech/images/25-06-18/clipboard-3790.9838e3.webp)
 
-![阳台山](./assets/yangtaishan.jpg)
+![](https://static.shanyue.tech/images/25-06-18/clipboard-8291.8f353d.webp)
 
-![云蒙山](./assets/yunmengshan.jpg)
+![](https://static.shanyue.tech/images/25-06-18/clipboard-7788.f04e5d.webp)
 
-![凤凰岭](./assets/fenghuangling.jpg)
+![](https://static.shanyue.tech/images/25-06-18/clipboard-6231.29a631.webp)
 
 > 19:00 吃饭，回家，敲代码

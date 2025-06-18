@@ -1,7 +1,7 @@
 ---
 title: Sequelize V5 升级指南：完整迁移方案与 1400+ 编译错误解决实录
 description: 详细记录 Sequelize 从 V4 升级到 V5 的完整过程，包含 TypeScript 编译错误处理、运行时问题解决方案，以及 1784 行代码变更的实战经验分享。
-publishDate: 2019-06-19T00:00:00.000Z
+pubDatetime: 2019-06-19T00:00:00.000Z
 tags: ["sequelize", "typescript", "nodejs", "orm", "database-migration"]
 ---
 

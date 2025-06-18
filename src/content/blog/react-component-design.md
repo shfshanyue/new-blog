@@ -1,7 +1,7 @@
 ---
 title: React 组件设计全攻略：15+ 个核心 UI 组件设计模式与最佳实践
 description: 深度解析 React 组件设计原则与实践，涵盖 Select、Modal、Table、Form 等 15+ 个核心 UI 组件的完整设计方案，包含 API 设计、交互逻辑和代码实现的最佳实践。
-publishDate: 2020-08-15T00:00:00.000Z
+pubDatetime: 2020-08-15T00:00:00.000Z
 tags:
   [
     "react",

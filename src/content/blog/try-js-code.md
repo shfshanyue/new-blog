@@ -1,7 +1,7 @@
 ---
 title: JavaScript 在线练习平台完全指南：5 个最佳代码实验工具推荐
 description: 详细介绍 Chrome DevTools、CodePen、CodeSandbox、StackBlitz 等主流在线 JavaScript 代码练习平台，涵盖 ES6/DOM API、CSS、React/Vue 项目和 Node.js 开发的完整学习方案。
-publishDate: 2019-06-05T00:00:00.000Z
+pubDatetime: 2019-06-05T00:00:00.000Z
 tags: ["javascript", "online-coding", "devtools", "codepen", "codesandbox"]
 ---
 

@@ -79,8 +79,6 @@ Response 重要字段:
 1. Popularity: 根据 Github 的星星与周下载量查看受欢迎度
 1. Activity: 根据 Commit 情况查看是否活跃
 
-![yarn](./assets/yarn-home.png)
-
 ## 03. 最好用的 CDN: jsdelivr.com
 
 **`Jsdeliver` 在中国有 CDN 节点！**
@@ -106,8 +104,6 @@ Snyk 的口号是 `Find the best package for your next project.`，相比 `yarn`
 UNPKG 是一个服务于 NPM 仓库的 CDN，用以快速使用发送请求的方式加载文件。另外，还提供一些基础信息查询的 API
 
 官方文档: <https://unpkg.com/>
-
-![](./assets/pkg-search.jpg)
 
 ### Meta
 

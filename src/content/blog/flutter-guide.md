@@ -1,7 +1,7 @@
 ---
 title: Flutter 入门完全指南：从 Dart 语言到跨平台应用开发实战教程
 description: 完整的 Flutter 和 Dart 学习指南，涵盖环境搭建、组件开发、状态管理、网络请求、存储等核心知识点，适合零基础入门跨平台移动应用开发的完整教程。
-publishDate: 2019-04-04T00:00:00.000Z
+pubDatetime: 2019-04-04T00:00:00.000Z
 tags: ["flutter", "dart", "mobile-development", "cross-platform", "android-ios"]
 ---
 

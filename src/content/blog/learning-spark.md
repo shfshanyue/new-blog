@@ -1,7 +1,7 @@
 ---
 title: "Apache Spark 完全入门指南：从环境搭建到 Structured Streaming 的零基础学习教程"
 description: "详细讲解Apache Spark大数据处理框架的核心概念，涵盖环境搭建、Dataset、RDD、SQL、DataFrame等主要组件，包含实战代码示例，适合初学者快速掌握Spark开发技能"
-publishDate: 2019-05-04T20:55:33+08:00
+pubDatetime: 2019-05-04T20:55:33+08:00
 tags: ["spark", "big-data", "scala", "dataset", "rdd"]
 ---
 

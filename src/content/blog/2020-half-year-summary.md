@@ -39,13 +39,9 @@ tags: ["summary", "2020", "projects", "technology", "blog", "career"]
 
 为了更好地支撑个人项目，因此做了一些基础设施相关的事情
 
-![](./assets/project.drawio.png)
-
 ### `CaaS`
 
 `Container as a Service`，容器即服务，快速部署个人项目到服务器上。也可以在上边做一些大软件的部署实践，如 `mysql`、`prometheus`、`ES` 和 `kibana` 等。
-
-![](../op/assets/dev.drawio.png)
 
 ### `Package`
 

@@ -15,8 +15,6 @@ tags: ["review", "project", "resume", "markdown", "store"]
 
 ## 01 [一纸简历](https://cv.devtool.tech/app)上线
 
-![一纸简历](./assets/yizhijianli.png)
-
 这几天从无到有上线了一个新的应用：[一纸简历](https://cv.devtool.tech/app)，它使用 `Markdown` 编写简历，用以两个月后我重新找工作时的简历制作与投递。
 
 正如这个应用的名字而言，简历只需一页，本应用会根据简历内容多寡来自动压缩为一页简历。
@@ -25,11 +23,7 @@ tags: ["review", "project", "resume", "markdown", "store"]
 
 它最大的优势为实时渲染 `PDF`，你在网页上所见到的样式便是 `PDF` 中真实的样式，缺点在于 `PDF` 中的样式与实在难调，而以下是我的目标样式
 
-![最终样式](./assets/jianli.jpg)
-
 ## 02 [MDTU](https://markdown.devtool.tech/app)重构
-
-![MDTU 编辑器](./assets/mdtu.png)
 
 `MDTU`，域名迁移到 `markdown.devtool.tech`，因此该应用也命名为 `Markdown Devtool`，简称 `MDTU`，谐音取中文字 **码途编辑器**，也有人戏称为 **码秃编辑器**。
 
@@ -38,10 +32,6 @@ tags: ["review", "project", "resume", "markdown", "store"]
 `MDTU` 也经历了一次重构，由以前的项目 [开发者工具箱](https://devtool.tech) 抽离出来，并对首页体积进行了优化: 500KB -> 126KB。
 
 ## 03 程序员的小书桌店铺
-
-![这么多图标你认识几个](./assets/logo.png)
-
-![CSS 图案的短袖](./assets/duanxiu.jpg)
 
 这是我心血来潮开的一个淘宝店铺，专注于程序员周边，因此店铺名就叫做**程序员的小书桌**。目前仅仅有新上架的一件 `CSS` 图案的短袖与40张一套的贴纸，有兴趣的你可以关注一下。
 

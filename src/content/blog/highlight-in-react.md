@@ -1,7 +1,7 @@
 ---
 title: React 关键字高亮组件实现：十行代码搞定文本高亮功能
 description: 详解如何使用仅十行React代码实现一个高性能的关键字高亮组件，包含正则表达式处理、mark标签语义化、以及完整的实现方案和最佳实践。
-publishDate: 2019-03-19T00:14:44.000Z
+pubDatetime: 2019-03-19T00:14:44.000Z
 tags: ["react", "javascript", "frontend", "component", "text-highlight"]
 ---
 

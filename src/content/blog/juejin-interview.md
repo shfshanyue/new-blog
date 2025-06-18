@@ -1,7 +1,7 @@
 ---
 title: "掘金面试文章精选合集：前端后端移动端面试题库大全"
 description: "精心整理的掘金平台热门面试文章合集，涵盖前端、后端、Android/iOS移动端面试题库，包含100+篇高质量面试文章，助力求职面试成功"
-publishDate: 2019-11-17T10:00:00+08:00
+pubDatetime: 2019-11-17T10:00:00+08:00
 tags: ["interview", "frontend", "backend", "mobile", "juejin"]
 ---
 

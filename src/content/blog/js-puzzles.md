@@ -1,7 +1,7 @@
 ---
 title: JavaScript 核心疑难问题解析：基于 You-Dont-Know-JS 的 40+ 道面试必备题
 description: 深度解析 JavaScript 核心概念疑难问题，涵盖类型转换、作用域闭包、this绑定、原型继承等高频面试题，基于 You-Dont-Know-JS 系列精心整理的完整知识点汇总。
-publishDate: 2017-05-04T00:00:00.000Z
+pubDatetime: 2017-05-04T00:00:00.000Z
 tags:
   [
     "javascript",

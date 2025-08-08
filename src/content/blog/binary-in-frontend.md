@@ -11,7 +11,7 @@ tags: ["javascript", "binary", "frontend", "arraybuffer", "blob"]
 
 本篇文章总结了浏览器端的二进制以及有关数据之间的转化，如 `ArrayBuffer`，`TypedArray`，`Blob`，`DataURL`，`ObjectURL`，`Text` 之间的互相转换。为了更好的理解与方便以后的查询，特意做了一张图做总结。
 
-![二进制相互转换图](/src/assets/images/binary/transform.jpg)
+![二进制相互转换图](/assets/images/binary/transform.jpg)
 
 ## 二进制相关数据类型
 
@@ -244,7 +244,7 @@ function download(url, name) {
 
 ## 二进制数据转换
 
-![二进制相互转换图](/src/assets/images/binary/transform.jpg)
+![二进制相互转换图](/assets/images/binary/transform.jpg)
 
 以上是二进制数据间的转换图，有一些转换可以直接通过 API，有些则需要代码，以下贴几种常见转换的代码
 

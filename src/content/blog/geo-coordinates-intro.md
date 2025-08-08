@@ -28,7 +28,7 @@ tags: ["geography", "coordinates", "gis", "wgs84", "gcj02"]
 
 世界经度与时区图:
 
-![世界经度与时区图](/src/assets/images/geo/1600px-World_Time_Zones_Map.png)
+![世界经度与时区图](/assets/images/geo/1600px-World_Time_Zones_Map.png)
 
 ## 纬度
 

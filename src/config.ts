@@ -9,6 +9,7 @@ export const SITE: Site = {
   lightAndDarkMode: true,
   postPerPage: 20,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
+  googleAnalyticsId: "G-3MF7K787DV", // replace with your GA4 measurement ID
 };
 
 export const LOCALE = {

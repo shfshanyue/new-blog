@@ -4,6 +4,8 @@ import "@styles/base.css";
 import { ViewTransitions } from "astro:transitions";
 
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
+const googleAnalyticsId =
+  import.meta.env.PUBLIC_GOOGLE_ANALYTICS_ID || SITE.googleAnalyticsId;
 
 export interface Props {
   title?: string;
@@ -102,6 +104,30 @@ const socialImageURL = new URL(
           name="google-site-verification"
           content={googleSiteVerification}
         />
+      )
+    }
+
+    {
+      // If PUBLIC_GOOGLE_ANALYTICS_ID or SITE.googleAnalyticsId is set,
+      // include Google Analytics 4 tracking scripts
+      googleAnalyticsId && (
+        <>
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}
+          />
+          <script is:inline>
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${googleAnalyticsId}', {
+                page_title: document.title,
+                page_location: window.location.href,
+              });
+            `}
+          </script>
+        </>
       )
     }
 

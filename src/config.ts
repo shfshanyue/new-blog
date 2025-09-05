@@ -1,10 +1,11 @@
 import type { Site, SocialObjects } from "./types";
 
 export const SITE: Site = {
-  website: "https://blog.shanyue.tech/", // replace this with your deployed domain
+  website: "https://shanyue.tech/", // replace this with your deployed domain
   author: "shanyue",
   desc: "",
-  title: "山月",
+  title: "山月的琐碎博客记录 | 山月行",
+  h1: "山月行",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerPage: 20,

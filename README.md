@@ -47,7 +47,7 @@ Inside of AstroPaper, you'll see the following folders and files:
 │   ├── assets/
 │   │   └── logo.svg
 │   │   └── logo.png
-│   └── favicon.svg
+│   └── favicon.ico
 │   └── astropaper-og.jpg
 │   └── robots.txt
 │   └── toggle-theme.js

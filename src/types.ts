@@ -4,6 +4,7 @@ export type Site = {
   website: string;
   author: string;
   desc: string;
+  h1: string;
   title: string;
   ogImage?: string;
   lightAndDarkMode: boolean;

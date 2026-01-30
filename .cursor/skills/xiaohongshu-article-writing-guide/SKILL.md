@@ -1,9 +1,8 @@
 ---
-description: 
-globs: 
-alwaysApply: false
+name: xiaohongshu-article-writing-guide
+description: 发表于小红书的文章的写作规范
 ---
-# 技术文章写作规范
+# 小红书技术文章写作规范
 
 ## 文章结构要求
 

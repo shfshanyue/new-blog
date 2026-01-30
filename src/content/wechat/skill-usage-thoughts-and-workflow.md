@@ -7,7 +7,7 @@ tags: ["Skill", "Cursor", "AI 工作流", "生图", "多平台发布"]
 
 分享最近使用 Skill 的一些想法
 
-多用一些编码的最佳实践，比如 react、vue、next、postgresql，每次使用 cursor 或 claude code 创建好 Plan 之后，显式地 @skill 去编码。如果前期编码没有使用到的话，可以 @skill 让它去做 code review。
+多用一些编码的最佳实践，比如 react、vue、next、postgresql，每次使用 cursor 或 claude code 创建好 Plan 之后，显式地 @skill 去编码。如果前期编码没有使用到的话，可以 @skill 让它去做 code review。如果不太知道自己项目需要用到哪个 skill 的话，可以使用 find-skills (https://github.com/vercel-labs/skills) 这个 skill 去查找。
 
 但这其实本质上来说是 Prompt，只不过将最佳实践作为了 Prompt。比如我使用 cursor 写好博客，我需要给文章配图，那这个时候就想让 AI 按照文章内容进行配图，但是 cursor 没有生成图片的能力，这个时候应该怎么办。
 

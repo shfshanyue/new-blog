@@ -1,6 +1,6 @@
 ---
 name: wechat-graphic-message
-description: Writes or polishes WeChat graphic/text message (微信图文消息) style content. No markdown, no images, 4–5 title options per batch, blank line after each paragraph. When polishing, avoid AI-style phrasing. Use when drafting or polishing 微信图文、公众号图文、微信推文 or when the user asks for WeChat-style format.
+description: Writes or polishes WeChat graphic/text message (微信图文消息) style content. No markdown, no images, blank line after each paragraph. End with #全栈成长之路. When polishing, avoid AI-style phrasing. Use when drafting or polishing 微信图文、公众号图文、微信推文 or when the user asks for WeChat-style format.
 ---
 
 # 微信图文消息写作规范
@@ -15,6 +15,7 @@ description: Writes or polishes WeChat graphic/text message (微信图文消息)
 2. 可使用 1 2 3 等数字编号表达条理。
 3. 不插入图片，纯文字呈现。
 4. 每一段后空一行（段末换行后再换行一次）。
+5. 正文末尾添加 #全栈成长之路。
 
 ## 润色时的文风要求
 
@@ -25,23 +26,9 @@ description: Writes or polishes WeChat graphic/text message (微信图文消息)
 - 用具体细节替代抽象概括，用动词和名词替代形容词堆砌。
 - 整体读起来像人写的、可随口说出来的话，而非机翻或范文腔。
 
-## 标题生成
-
-当需要生成标题时：
-
-- 一次性给出 4～5 个标题备选。
-- 方便用户筛选、删除后保留最终选用的一条。
-
 ## 输出示例（结构示意）
 
 ```
-标题备选（任选其一）：
-1. 第一个标题
-2. 第二个标题
-3. 第三个标题
-4. 第四个标题
-5. 第五个标题
-
 正文第一段。
 
 正文第二段。
@@ -51,6 +38,8 @@ description: Writes or polishes WeChat graphic/text message (微信图文消息)
 2 第二条要点。
 
 3 第三条要点。
+
+#全栈成长之路
 ```
 
 ## 自检清单
@@ -58,6 +47,6 @@ description: Writes or polishes WeChat graphic/text message (微信图文消息)
 - [ ] 未使用 **、`、##、--- 等 markdown 符号
 - [ ] 仅用 1 2 3 等数字编号，未用其他格式强调
 - [ ] 未插入图片
-- [ ] 生成标题时已给出 4～5 个选项
 - [ ] 每一段后均空一行
+- [ ] 正文末尾已添加 #全栈成长之路
 - [ ] 润色时未出现 AI 风套话、排比堆砌或范文腔

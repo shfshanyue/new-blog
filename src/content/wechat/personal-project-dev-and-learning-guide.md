@@ -15,7 +15,6 @@ tags: ["个人项目", "开发规范", "源码阅读", "AI 协作", "学习路�
 
 4 源码阅读：用 AI 带着通读项目依赖的源码，效率更高。先整体通读，再挑一部分细读，最后问 AI「这段源码做了哪些性能或架构上的优化？」阅读时间按项目复杂度来，一般通读不超过两小时。优先选核心技术栈的源码，例如 vue-query、VueUse、复杂业务组件等（按实际技术栈取舍）。
 
-
 5 AI 开发环境：从工程与协作角度，看看 Vercel 系项目（如 vercel/next.js、vercel/turborepo）如何维护 AI 相关配置，例如 agents.md、skills、Cursor rules 等，借鉴他们的组织方式与约定。
 
 6 AI 工具 Prompts：从业务与使用角度，研究各类 AI 工具的 prompts 设计，例如 Claude Code、Meltbot、Auto Claude 等。理解他们如何描述任务、约束输出、设计 few-shot，再反哺到自己日常的 prompt 使用里。

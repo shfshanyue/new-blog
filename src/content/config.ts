@@ -25,4 +25,6 @@ const blog = defineCollection({
 
 const rednotes = blog;
 
-export const collections = { blog, rednotes };
+const wechat = blog;
+
+export const collections = { blog, rednotes, wechat };

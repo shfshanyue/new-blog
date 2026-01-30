@@ -1,6 +1,6 @@
 ---
 name: xiaohongshu-article-writing-guide
-description: 发表于小红书的文章的写作规范
+description: 发表于小红书的文章的写作规范。Technical articles for Xiaohongshu with structured format, concise sections, and natural human-like writing that avoids AI-style phrasing. Use when writing or polishing rednotes content.
 ---
 # 小红书技术文章写作规范
 
@@ -52,3 +52,13 @@ const example = {
 - 避免口语化表述，保持专业性
 - 中英文混排时注意空格规范
 - 专业名词使用 "``" 包裹，如 `OpenTelemetry`
+
+### 避免 AI 风格
+
+撰写或润色时，文字要自然、人性化，避免明显的 AI 生成痕迹：
+
+- 少用或不用「首先、其次、此外、综上所述、毋庸置疑、在这个……的时代」等套话与模板式过渡
+- 避免排比堆砌、空洞升华、过度对称的句式结构
+- 用具体技术细节和实例替代抽象概括，用动词和名词替代形容词堆砌
+- 保持技术文章的专业性，但语言要流畅自然，像有经验的开发者在分享经验
+- 避免「赋能」「助力」「打造」等营销话术渗入技术内容

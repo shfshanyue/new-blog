@@ -363,12 +363,9 @@ twMerge("text-center", "text-left");
 
 .translate-y-4,
 .translate-y-6 {
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(
-      var(--tw-rotate)
-    )
-    skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(
-      var(--tw-scale-y)
-    );
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 ```
 

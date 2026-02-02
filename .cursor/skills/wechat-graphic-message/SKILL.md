@@ -9,6 +9,15 @@ description: Writes or polishes WeChat graphic/text message (微信图文消息)
 
 用户要求写或润色微信图文消息、公众号推文、微信图文内容，或明确按本规范输出时，遵循以下规则。
 
+## 保存位置与 Frontmatter
+
+- 内容保存到 `src/content/wechat/` 目录，文件名使用英文短横线命名（如 `my-article-title.md`）。
+- 文件顶部使用 Frontmatter：
+  - `title`：简洁明确的标题
+  - `description`：80–120 字的摘要，概括正文要点
+  - `pubDatetime`：发布时间，使用 ISO 8601 格式（如 `2025-01-31T00:00:00Z`）
+  - `tags`：3–5 个标签，便于分类检索，如 `["标签一", "标签二"]`
+
 ## 正文格式
 
 1. 不使用 markdown 符号：禁止使用加粗、反引号、标题符号、分割线等（如 **、`、##、---）。
@@ -28,7 +37,16 @@ description: Writes or polishes WeChat graphic/text message (微信图文消息)
 
 ## 输出示例（结构示意）
 
+文件路径：`src/content/wechat/文章英文名.md`
+
 ```
+---
+title: 文章标题
+description: 80–120 字摘要，概括正文要点。
+pubDatetime: 2025-01-31T00:00:00Z
+tags: ["标签一", "标签二", "标签三"]
+---
+
 正文第一段。
 
 正文第二段。
@@ -44,7 +62,9 @@ description: Writes or polishes WeChat graphic/text message (微信图文消息)
 
 ## 自检清单
 
-- [ ] 未使用 **、`、##、--- 等 markdown 符号
+- [ ] 已保存到 `src/content/wechat/`，文件名为英文短横线
+- [ ] 已包含 Frontmatter：title、description、pubDatetime、tags
+- [ ] 未使用 **、`、##、--- 等 markdown 符号（正文部分）
 - [ ] 仅用 1 2 3 等数字编号，未用其他格式强调
 - [ ] 未插入图片
 - [ ] 每一段后均空一行

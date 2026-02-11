@@ -22,10 +22,11 @@
 /
 ├── src/
 │   ├── content/          # 内容集合
-│   │   ├── blog/         # 主要技术博客文章
-│   │   ├── rednotes/     # 小红书风格的短文章
-│   │   ├── wechat/       # 微信图文素材
-│   │   └── config.ts     # 内容集合配置
+│   │   ├── blog/             # 主要技术博客文章
+│   │   ├── rednotes/         # 小红书风格的短文章
+│   │   ├── wechat/           # 公众号图文消息（短图文素材）
+│   │   ├── wechat-articles/  # 公众号文章（发在公众号的正式文章）
+│   │   └── config.ts         # 内容集合配置
 │   ├── layouts/          # 页面布局
 │   ├── components/       # React/Astro 组件
 │   └── pages/            # 路由页面
@@ -59,9 +60,9 @@
 - 突出关键词使用 `**粗体**`
 - 生成 2-4 个二级标题
 
-### 3. WeChat (`src/content/wechat/`)
+### 3. WeChat 图文消息 (`src/content/wechat/`)
 
-微信公众号图文素材。
+公众号图文消息（短图文、卡片式素材），用于单条推送的正文或配图文字。
 
 **写作规范**：
 - 参考 `.cursor/skills/wechat-graphic-message/SKILL.md`
@@ -71,6 +72,10 @@
 - 每一段后空一行
 - 生成标题时给出 4-5 个选项
 - 避免 AI 风套话，保持口语化、人性化表达
+
+### 4. 公众号文章 (`src/content/wechat-articles/`)
+
+专门用于在公众号发布的正式文章（长文、系列等），与「图文消息」区分：此处为完整文章内容，可复用 blog 的 Frontmatter 与排版习惯。
 
 ## Git 提交规范
 
@@ -102,7 +107,8 @@ pnpm cz         # 交互式提交（Commitizen）
 1. **选择内容类型**：根据文章长度和用途选择内容集合
    - `blog/` - 深度技术文章
    - `rednotes/` - 小红书风格短文
-   - `wechat/` - 微信图文素材
+   - `wechat/` - 公众号图文消息（短图文素材）
+   - `wechat-articles/` - 公众号文章（发在公众号的正式文章）
 2. **创建 Markdown 文件**：在 `src/content/{collection}/` 目录创建 `.md` 文件，文件名使用 kebab-case
 3. **添加 Frontmatter**：填写必要的元数据（title、description、pubDatetime、tags）
 4. **编写正文**：遵循对应的写作规范

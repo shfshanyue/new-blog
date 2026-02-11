@@ -27,4 +27,6 @@ const rednotes = blog;
 
 const wechat = blog;
 
-export const collections = { blog, rednotes, wechat };
+const wechatArticles = blog;
+
+export const collections = { blog, rednotes, wechat, wechatArticles };

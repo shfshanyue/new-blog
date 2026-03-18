@@ -4,7 +4,7 @@ import Hr from "./Hr.astro";
 import LinkButton from "./LinkButton.astro";
 
 export interface Props {
-  activeNav?: "posts" | "tags" | "about" | "search" | "rednotes";
+  activeNav?: "posts" | "tags" | "about" | "search" | "rednotes" | "wechat";
 }
 
 const { activeNav } = Astro.props;
@@ -66,6 +66,11 @@ const { activeNav } = Astro.props;
               class={activeNav === "rednotes" ? "active" : ""}
             >
               RedNotes
+            </a>
+          </li>
+          <li>
+            <a href="/wechat/" class={activeNav === "wechat" ? "active" : ""}>
+              WeChat
             </a>
           </li>
           <li>

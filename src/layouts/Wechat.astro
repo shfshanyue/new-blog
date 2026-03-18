@@ -11,22 +11,22 @@ import { SITE } from "@config";
 export interface Props {
   currentPage: number;
   totalPages: number;
-  paginatedPosts: CollectionEntry<"rednotes">[];
+  paginatedPosts: CollectionEntry<"wechat">[];
 }
 
 const { currentPage, totalPages, paginatedPosts } = Astro.props;
 ---
 
-<Layout title={`RedNotes | ${SITE.title}`}>
-  <Header activeNav="rednotes" />
+<Layout title={`WeChat | ${SITE.title}`}>
+  <Header activeNav="wechat" />
   <Main
-    pageTitle="RedNotes"
-    pageDesc="这里的小红书内容与我的小红书保持同步，主要是一些编程知识分享"
+    pageTitle="WeChat"
+    pageDesc="这里的公众号内容与我的公众号保持同步，主要是一些编程知识分享"
   >
     <ul>
       {
         paginatedPosts.map(post => (
-          <Card href={`/rednotes/${post.id}/`} frontmatter={post.data} />
+          <Card href={`/wechat/${post.id}/`} frontmatter={post.data} />
         ))
       }
     </ul>
@@ -35,8 +35,8 @@ const { currentPage, totalPages, paginatedPosts } = Astro.props;
   <Pagination
     {currentPage}
     {totalPages}
-    prevUrl={`/rednotes${currentPage - 1 !== 1 ? "/" + (currentPage - 1) : ""}/`}
-    nextUrl={`/rednotes/${currentPage + 1}/`}
+    prevUrl={`/wechat${currentPage - 1 !== 1 ? "/" + (currentPage - 1) : ""}/`}
+    nextUrl={`/wechat/${currentPage + 1}/`}
   />
 
   <Footer noMarginTop={totalPages > 1} />

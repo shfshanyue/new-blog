@@ -1,13 +1,13 @@
 ---
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
-import Rednotes from "@layouts/Rednotes.astro";
+import Wechat from "@layouts/Wechat.astro";
 import { SITE } from "@config";
 
-const rednotes = await getCollection("rednotes");
+const wechats = await getCollection("wechat");
 
-// 过滤和排序rednotes
-const filteredRednotes = rednotes
+// 过滤和排序wechat
+const filteredWechats = wechats
   .filter(note => !note.data.draft)
   .sort(
     (a, b) =>
@@ -16,11 +16,11 @@ const filteredRednotes = rednotes
   );
 
 // 简单分页
-const paginatedPosts = filteredRednotes.slice(0, SITE.postPerPage);
+const paginatedPosts = filteredWechats.slice(0, SITE.postPerPage);
 ---
 
-<Rednotes
+<Wechat
   currentPage={1}
-  totalPages={Math.ceil(filteredRednotes.length / SITE.postPerPage)}
+  totalPages={Math.ceil(filteredWechats.length / SITE.postPerPage)}
   paginatedPosts={paginatedPosts}
 />

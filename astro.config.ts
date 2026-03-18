@@ -29,6 +29,14 @@ export default defineConfig({
     shikiConfig: {
       theme: "one-dark-pro",
       wrap: true,
+      langAlias: {
+        svg: "xml",
+        gradle: "groovy",
+        Dart: "dart",
+        spark: "scala",
+        Dockerfile: "dockerfile",
+        sbt: "scala",
+      },
     },
   },
   vite: {

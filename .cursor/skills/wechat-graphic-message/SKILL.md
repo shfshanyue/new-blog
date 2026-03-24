@@ -1,6 +1,6 @@
 ---
 name: wechat-graphic-message
-description: Writes or polishes WeChat graphic/text message (微信图文消息) style content. No markdown, no images, blank line after each paragraph. End with #全栈成长之路. When polishing, avoid AI-style phrasing. Use when drafting or polishing 微信图文、公众号图文、微信推文 or when the user asks for WeChat-style format.
+description: Writes or polishes WeChat graphic/text message (微信图文消息) style content. No markdown, no images, blank line after each paragraph; body about 200 Chinese characters (roughly 180–230). End with #全栈成长之路. When polishing, avoid AI-style phrasing. Use when drafting or polishing 微信图文、公众号图文、微信推文 or when the user asks for WeChat-style format.
 ---
 
 # 微信图文消息写作规范
@@ -25,6 +25,12 @@ description: Writes or polishes WeChat graphic/text message (微信图文消息)
 3. 不插入图片，纯文字呈现。
 4. 每一段后空一行（段末换行后再换行一次）。
 5. 正文末尾添加 #全栈成长之路。
+
+## 篇幅与字数
+
+- 正文以**汉字**为主计量，宜维持在 **200 字左右**（约 150–300 字可接受）：太短易显单薄，太长不像单条图文素材。
+- 统计时去掉 Frontmatter，以正文段落为准；话题行（如 `#全栈成长之路`）里的汉字可计入总篇幅，也可单独一行不计入——以成稿读起来节奏紧凑为准。
+- 文中的英文、数字、域名或文件名（如 `agents.md`）不占汉字额度时，仍须控制整体阅读长度，避免正文实际过长。
 
 ## 润色时的文风要求
 
@@ -65,8 +71,9 @@ tags: ["标签一", "标签二", "标签三"]
 - [ ] 已保存到 `src/content/wechat/`，文件名为英文短横线
 - [ ] 已包含 Frontmatter：title、description、pubDatetime、tags
 - [ ] 未使用 **、`、##、--- 等 markdown 符号（正文部分）
-- [ ] 仅用 1 2 3 等数字编号，未用其他格式强调
+- [ ] 仅用 1. 2. 3. 等数字编号，未用其他格式强调，但是也要尽量少用
 - [ ] 未插入图片
 - [ ] 每一段后均空一行
+- [ ] 正文汉字篇幅约在 200 字左右（约 180–230 字）
 - [ ] 正文末尾已添加 #全栈成长之路
 - [ ] 润色时未出现 AI 风套话、排比堆砌或范文腔

@@ -14,7 +14,7 @@ tags: ["Amp", "Cursor", "AI 编程", "Claude Opus", "Lenny"]
 为啥 Amp 能更快干完活？个人认为主要有两点：
 
 1. 模型更强。Claude Opus 4.5 作为目前最好用的编程模型，一次做对的概率高。少几轮「不对，不是这样」的拉扯，整体效率就上去了。
-2. 更智能。Amp 内置 Librarian 先做 Plan，再派 SubAgent 并行干活。比如我让它优化所有组件，每个 SubAgent 各管一个目录，改完再汇总，比单 Agent 干活快很多。
+2. 更智能。Amp 内置 Oracle 先做 Plan，再派 SubAgent 并行干活。比如我让它优化所有组件，每个 SubAgent 各管一个目录，改完再汇总，比单 Agent 干活快很多。
 
 用了一年半 Cursor，都没有 Amp 这一个小时快活。
 

@@ -31,9 +31,9 @@
 │   ├── components/       # React/Astro 组件
 │   └── pages/            # 路由页面
 ├── public/               # 静态资源
-└── .cursor/
-    ├── skills/           # AI Agent 技能
-    └── rules/            # Cursor 规则（已迁移至本文件）
+└── .agents/              # 工具无关的 AI 配置（技能、MCP 等，可被多种助手读取）
+    ├── mcp.json          # MCP 服务器配置
+    └── skills/           # Agent 技能定义
 ```
 
 ## 内容类型
@@ -54,7 +54,7 @@
 小红书风格的技术短文，内容精炼、结构清晰。
 
 **写作规范**：
-- 参考 `.cursor/skills/xiaohongshu-article-writing-guide/SKILL.md`
+- 参考 `.agents/skills/xiaohongshu-article-writing-guide/SKILL.md`
 - 一级标题控制在 200 字左右
 - 二级标题每节 150-250 字，使用 `---` 分隔
 - 突出关键词使用 `**粗体**`
@@ -65,7 +65,7 @@
 公众号图文消息（短图文、卡片式素材），用于单条推送的正文或配图文字。
 
 **写作规范**：
-- 参考 `.cursor/skills/wechat-graphic-message/SKILL.md`
+- 参考 `.agents/skills/wechat-graphic-message/SKILL.md`
 - 不使用 markdown 符号（`**`、`` ` ``、`##`、`---`）
 - 可使用 1 2 3 数字编号
 - 不插入图片
@@ -124,6 +124,7 @@ pnpm cz         # 交互式提交（Commitizen）
 
 ## 注意事项
 
+- 项目级 AI 配置放在 `.agents/`，与具体厂商无关
 - 所有 markdown 文件需经过 Prettier 格式化
 - 提交前会自动运行 lint-staged 检查
 - 图片等静态资源放在 `public/` 目录下

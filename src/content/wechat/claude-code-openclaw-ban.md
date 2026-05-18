@@ -1,10 +1,9 @@
 ---
-
-## title: 你的 commit message 里不能出现竞品名
-
+title: 你的 commit message 里不能出现竞品名
 description: Theo 在推上曝光 Claude Code 会检测 commit message 中的「OpenClaw」字样并拒绝服务，HN 上 932 points 热议。这件事背后是 AI 编程工具从开放助手走向平台锁定的信号——当工具开始审查你的代码内容，开发者的边界在哪里？
 pubDatetime: 2026-05-02T03:12:00Z
 tags: ["AI编程", "Claude Code", "开发者工具", "平台锁定"]
+---
 
 假设你正在用 Claude Code 做 code review，commit message 里随手提了一句「migrate from OpenClaw」，然后它直接拒绝帮你——不给报错原因，就是不干了。
 

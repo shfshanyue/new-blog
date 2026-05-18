@@ -1,10 +1,9 @@
 ---
-
-## title: Plan 之后：个人项目偏分支，公司项目偏 worktree
-
+title: Plan 之后：个人项目偏分支，公司项目偏 worktree
 description: 生成 Plan 后可选新建分支或 git worktree。个人项目倾向切分支、执行 Plan、多 commit、Review、PR；公司项目因并发需求与 hotfix 更常用 worktree。顺带提到 worktree 的目录与依赖成本，以及 pnpm v11 共享 node_modules 的缓解。
 pubDatetime: 2026-05-06T00:00:00Z
 tags: ["Git", "工作流", "Plan", "分支", "worktree"]
+---
 
 在生成 Plan 之后，通常有两种开发方式可以选择：一是新建分支，二是新建 worktree。
 

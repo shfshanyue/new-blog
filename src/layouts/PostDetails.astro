@@ -4,7 +4,9 @@ import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import Tag from "@components/Tag.astro";
 import Datetime from "@components/Datetime";
-import { type CollectionEntry, render } from "astro:content";
+import SeriesBadge from "@components/SeriesBadge.astro";
+import SeriesNav from "@components/SeriesNav.astro";
+import { type CollectionEntry, getCollection, render } from "astro:content";
 import { slugifyStr } from "@utils/slugify";
 import ShareLinks from "@components/ShareLinks.astro";
 import { SITE } from "@config";
@@ -27,6 +29,59 @@ const {
 } = post.data;
 
 const { Content } = await render(post);
+
+const markdownEmpty = !(post.body && post.body.replace(/\s+/g, "").length);
+const isDraftStubBlog =
+  post.collection === "blog" && !!post.data.draft && markdownEmpty;
+
+type NeighborSide = { title: string; id: string };
+
+let seriesNeighbors:
+  | {
+      displayOrder: number;
+      total: number;
+      prev?: NeighborSide;
+      next?: NeighborSide;
+    }
+  | undefined;
+
+if (post.collection === "blog" && post.data.series) {
+  const siblings = await getCollection(
+    "blog",
+    entry => entry.data.series === post.data.series
+  );
+  siblings.sort((a, b) => {
+    const ao = a.data.seriesOrder ?? 1e9;
+    const bo = b.data.seriesOrder ?? 1e9;
+    return ao !== bo ? ao - bo : a.id.localeCompare(b.id);
+  });
+
+  const pos = siblings.findIndex(entry => entry.id === post.id);
+  seriesNeighbors =
+    pos < 0
+      ? undefined
+      : {
+          displayOrder:
+            post.data.seriesOrder !== undefined
+              ? post.data.seriesOrder
+              : pos + 1,
+          total: siblings.length,
+          prev:
+            pos === 0
+              ? undefined
+              : {
+                  title: siblings[pos - 1].data.title,
+                  id: siblings[pos - 1].id,
+                },
+          next:
+            pos + 1 >= siblings.length
+              ? undefined
+              : {
+                  title: siblings[pos + 1].data.title,
+                  id: siblings[pos + 1].id,
+                },
+        };
+}
 
 const ogImageUrl = typeof ogImage === "string" ? ogImage : ogImage?.src;
 const ogUrl = new URL(
@@ -73,9 +128,35 @@ const layoutProps = {
       size="lg"
       className="my-2"
     />
+    {
+      post.collection === "blog" && seriesNeighbors?.total && (
+        <SeriesBadge
+          series={post.data.series!}
+          seriesOrder={seriesNeighbors.displayOrder}
+          totalInSeries={seriesNeighbors.total}
+        />
+      )
+    }
     <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
-      <Content />
+      {
+        isDraftStubBlog ? (
+          <p class="not-prose text-center italic opacity-90">
+            📝 这篇文章还在撰写中，敬请期待。
+          </p>
+        ) : (
+          <Content />
+        )
+      }
     </article>
+
+    {
+      post.collection === "blog" && seriesNeighbors && (
+        <SeriesNav
+          prevPost={seriesNeighbors.prev}
+          nextPost={seriesNeighbors.next}
+        />
+      )
+    }
 
     <ul class="my-8">
       {tags.map(tag => <Tag tag={slugifyStr(tag)} />)}

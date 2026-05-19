@@ -1,0 +1,24 @@
+---
+export interface Props {
+  series: string;
+  seriesOrder: number;
+  totalInSeries: number;
+}
+
+const { series, seriesOrder, totalInSeries } = Astro.props;
+
+const href = `/series/${encodeURIComponent(series)}/`;
+---
+
+<p class="not-prose my-4 text-sm opacity-95">
+  <a
+    href={href}
+    class="inline-flex flex-wrap items-baseline gap-1 underline decoration-dashed underline-offset-[5px] hover:no-underline"
+  >
+    <span aria-hidden="true">📚</span>
+    <span>{series}</span>
+    <span class="opacity-75">
+      · 第 {seriesOrder} 篇，共 {totalInSeries} 篇</span
+    >
+  </a>
+</p>

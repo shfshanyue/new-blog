@@ -1,0 +1,42 @@
+---
+export interface Props {
+  prevPost?: { title: string; id: string };
+  nextPost?: { title: string; id: string };
+}
+
+const { prevPost, nextPost } = Astro.props;
+
+const hasNeighbors = !!(prevPost ?? nextPost);
+---
+
+{
+  hasNeighbors && (
+    <nav
+      aria-label="Series navigation"
+      class="not-prose mt-14 grid gap-5 border-t border-dashed border-skin-line pb-12 pt-8 text-sm leading-relaxed max-w-none"
+    >
+      {prevPost && (
+        <p>
+          <span class="opacity-80">← 上一篇：</span>
+          <a
+            href={`/posts/${prevPost.id}/`}
+            class="underline decoration-dashed underline-offset-[5px] hover:no-underline"
+          >
+            {prevPost.title}
+          </a>
+        </p>
+      )}
+      {nextPost && (
+        <p>
+          <span class="opacity-80">→ 下一篇：</span>
+          <a
+            href={`/posts/${nextPost.id}/`}
+            class="underline decoration-dashed underline-offset-[5px] hover:no-underline"
+          >
+            {nextPost.title}
+          </a>
+        </p>
+      )}
+    </nav>
+  )
+}

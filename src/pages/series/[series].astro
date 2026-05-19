@@ -1,0 +1,76 @@
+---
+import Footer from "@components/Footer.astro";
+import Header from "@components/Header.astro";
+import Datetime from "@components/Datetime.tsx";
+import Layout from "@layouts/Layout.astro";
+import Main from "@layouts/Main.astro";
+import { getCollection } from "astro:content";
+import { SITE } from "@config";
+
+export async function getStaticPaths() {
+  const entries = await getCollection("blog");
+  const titles = [
+    ...new Set(
+      entries
+        .map(e => e.data.series)
+        .filter((s): s is string => Boolean(s?.trim()))
+    ),
+  ];
+  return titles.map(seriesTitle => ({
+    params: { series: seriesTitle },
+  }));
+}
+
+const seriesTitle = Astro.params.series as string;
+
+const allPosts = await getCollection("blog");
+const seriesPosts = allPosts
+  .filter(p => p.data.series === seriesTitle)
+  .sort((a, b) => (a.data.seriesOrder ?? 0) - (b.data.seriesOrder ?? 0));
+---
+
+<Layout
+  title={`${seriesTitle} | ${SITE.title}`}
+  author={SITE.author}
+  pubDatetime=""
+  scrollSmooth={true}
+>
+  <Header />
+
+  <Main
+    pageTitle={`${seriesTitle}`}
+    pageDesc={`本系列合计 ${seriesPosts.length} 篇，按推荐阅读顺序列出。`}
+  >
+    <ul class="space-y-6">
+      {
+        seriesPosts.map(p => (
+          <li class="rounded-md border border-skin-line px-4 py-3 opacity-95">
+            {p.data.draft ? (
+              <div>
+                <p class="font-medium text-skin-accent">{p.data.title}</p>
+                <p class="mt-1 text-xs opacity-80">撰写中</p>
+              </div>
+            ) : (
+              <div class="flex flex-col gap-1">
+                <a
+                  href={`/posts/${p.id}/`}
+                  class="inline-block font-medium decoration-dashed underline underline-offset-[5px]"
+                >
+                  {p.data.title}
+                </a>
+                <p class="opacity-95">{p.data.description}</p>
+                <Datetime
+                  pubDatetime={p.data.pubDatetime}
+                  modDatetime={p.data.modDatetime}
+                  size="sm"
+                />
+              </div>
+            )}
+          </li>
+        ))
+      }
+    </ul>
+  </Main>
+
+  <Footer />
+</Layout>

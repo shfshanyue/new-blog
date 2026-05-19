@@ -1,0 +1,60 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import Posts from "@layouts/Posts.astro";
+import PostDetails from "@layouts/PostDetails.astro";
+import getSortedPosts from "@utils/getSortedPosts";
+import getPageNumbers from "@utils/getPageNumbers";
+import getPagination from "@utils/getPagination";
+import { SITE } from "@config";
+import postFilter from "@utils/postFilter";
+
+export interface Props {
+  post?: CollectionEntry<"blog">;
+}
+
+export async function getStaticPaths() {
+  const entries = await getCollection("blog");
+
+  const scheduledOrDev = (pubTime: Date) =>
+    import.meta.env.DEV ||
+    Date.now() > pubTime.getTime() - SITE.scheduledPostMargin;
+
+  const blogPostDetailRoutable = (p: CollectionEntry<"blog">) => {
+    if (!p.data.draft) return postFilter(p);
+    if (!p.data.series) return false;
+    return scheduledOrDev(new Date(p.data.pubDatetime));
+  };
+
+  const postPaths = entries.filter(blogPostDetailRoutable).map(post => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+
+  /** Paginated indexes use plain numeric slug segments (`/posts/2/`, …). */
+  const filteredForListing = entries.filter(postFilter);
+  const pagePaths = getPageNumbers(filteredForListing.length).map(pageNum => ({
+    params: { slug: String(pageNum) },
+  }));
+
+  return [...postPaths, ...pagePaths];
+}
+
+const posts = await getCollection("blog");
+const sortedPosts = getSortedPosts(posts);
+
+const slugParam = Astro.params.slug ?? "";
+
+const { post } = Astro.props;
+
+/** Paginated URLs are `/posts/2/` etc.; nested articles always contain `/`. */
+const pagination =
+  post == null && /^\d+$/.test(slugParam)
+    ? getPagination({ posts: sortedPosts, page: slugParam })
+    : getPagination({
+        posts: sortedPosts,
+        page: "1",
+        isIndex: slugParam === "",
+      });
+---
+
+{post ? <PostDetails post={post} /> : <Posts {...pagination} />}

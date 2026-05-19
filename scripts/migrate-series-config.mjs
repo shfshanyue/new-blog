@@ -1,0 +1,32 @@
+export const SERIES = [
+  {
+    dir: "frontend-engineering",
+    series: "前端工程化",
+    slug: "frontend-engineering",
+    tags: ["frontend-engineering"],
+  },
+  { dir: "node", series: "Node 牛刀小试", slug: "node", tags: ["node"] },
+  {
+    dir: "graphql-guide",
+    series: "GraphQL 指南",
+    slug: "graphql-guide",
+    tags: ["graphql"],
+    order: [
+      "hello",
+      "hello-core",
+      "schema",
+      "http",
+      "resolve",
+      "cache",
+      "client-cache",
+      "structed-error",
+      "structed-log",
+      "ts",
+      "apq",
+      "graphql-and-ssr",
+    ],
+  },
+  { dir: "what-happens", series: "互联网协议", slug: "what-happens", tags: ["network"] },
+  { dir: "web-performance", series: "Web 性能优化", slug: "web-performance", tags: ["performance"] },
+  { dir: "flutter-guide", series: "Flutter 入门", slug: "flutter-guide", tags: ["flutter"], order: ["Readme"] },
+];

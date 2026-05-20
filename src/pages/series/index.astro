@@ -1,0 +1,38 @@
+---
+import { getCollection } from "astro:content";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import Layout from "@layouts/Layout.astro";
+import Main from "@layouts/Main.astro";
+import getSeriesSummaries from "@utils/getSeriesSummaries";
+import { SITE } from "@config";
+
+const posts = await getCollection("blog");
+const seriesList = getSeriesSummaries(posts);
+const seriesCount = seriesList.length;
+---
+
+<Layout title={`专栏 | ${SITE.title}`} author={SITE.author} pubDatetime="">
+  <Header activeNav="series" />
+  <Main
+    pageTitle="专栏"
+    pageDesc={`按系列浏览技术文章，共 ${seriesCount} 个系列。`}
+  >
+    <ul class="space-y-4">
+      {
+        seriesList.map(({ title, slug, count }) => (
+          <li class="rounded-md border border-skin-line px-4 py-3">
+            <a
+              href={`/series/${encodeURIComponent(slug)}/`}
+              class="font-medium decoration-dashed underline underline-offset-[5px] hover:no-underline"
+            >
+              {title}
+            </a>
+            <p class="mt-1 text-sm opacity-80">共 {count} 篇</p>
+          </li>
+        ))
+      }
+    </ul>
+  </Main>
+  <Footer />
+</Layout>

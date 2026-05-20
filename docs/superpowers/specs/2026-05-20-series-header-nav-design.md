@@ -1,7 +1,7 @@
 # 专栏总览页与 Header 导航设计
 
 **日期**：2026-05-20  
-**状态**：已审批，待实现  
+**状态**：已实现  
 **依赖**：`2026-05-18-migrate-old-blog-series-design.md`（系列 schema、`/series/[series]`、SeriesBadge/SeriesNav 已实现）
 
 ## 背景

@@ -1,6 +1,6 @@
 ---
 title: 营销站挂着 React，就为了开个侧边栏？
-description: 有团队把 Astro 营销站从 React 和 Ark UI 迁到原生 Web Components，gzip 后 JavaScript 少了约 100KB，移动菜单、主题切换、下拉和侧栏弹层功能都在。他们用 nanotags 包了一层 Custom Elements，核心不到 2.5KB，配合 nanostores 做响应式，无障碍对着 W3C 规范自己写 attachment。
+description: 有团队把 Astro 营销站从 React 和 Ark UI 迁到原生 Web Components，gzip 后 JavaScript 少了约 100KB，移动菜单、主题切换、下拉和侧栏弹层功能都在。他们用 nanotags 包了一层 Custom Elements，核心不到 2.5KB，配合 nanostores 做响应式；无障碍对着 W3C 规范写 attachment，键盘和读屏没退步。营销页若只是几个弹窗和菜单，值得先想想要不要整包 React。
 pubDatetime: 2026-06-01T00:00:00Z
 tags: ["性能优化", "Web Components", "Astro", "前端架构", "营销站"]
 ---
